@@ -1,0 +1,8 @@
+@use "../../App.scss" as *;
+
+.side-right {
+  height: 100vh;
+  width: 32rem;
+  background-color: $background-white;
+  box-shadow: rgb(99 99 99 / 20%) -1px 0px 12px 0px;
+}

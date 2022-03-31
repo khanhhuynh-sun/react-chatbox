@@ -1,0 +1,17 @@
+@use "../../App.scss" as *;
+
+.header {
+  color: $font-light;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  letter-spacing: 4px;
+  &__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  &__home {
+    font-size: 3.9rem;
+    color: $font-light;
+  }
+}
