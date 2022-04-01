@@ -2,35 +2,6 @@ import React, { useEffect, useState } from "react";
 import avatar from "../../img/avatar.jpg";
 import "./MessageList.scss";
 
-const messages = [
-  {
-    message:
-      "First Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
-    isClient: false,
-  },
-  {
-    message: "Lorem ipsum dolor sit amet, ipsum dolor sit amet",
-    isClient: true,
-  },
-  {
-    message: "Lorem ipsum dolor sit amet",
-    isClient: false,
-  },
-  {
-    message:
-      "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit ametLorem ipsum dolor sit amet",
-    isClient: true,
-  },
-  {
-    message: "Lorem ipsum dolor sit amet",
-    isClient: false,
-  },
-  {
-    message: "Lorem ipsum dolor sit amet",
-    isClient: true,
-  },
-];
-
 const MessageList = (props) => {
   const [messageList, setMessageList] = useState(props.messageList);
 
