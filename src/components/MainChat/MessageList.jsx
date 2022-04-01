@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import avatar from "../../img/avatar.jpg";
 import "./MessageList.scss";
 
@@ -31,10 +31,17 @@ const messages = [
   },
 ];
 
-const MessageList = () => {
+const MessageList = (props) => {
+  const [messageList, setMessageList] = useState(props.messageList);
+
+  useEffect(() => {
+    setMessageList(props.messageList);
+  }, [props.messageList]);
+
   return (
     <ul className="message-list">
-      {messages.map((message, index) => {
+      {console.log(messageList)}
+      {messageList.map((message, index) => {
         return (
           <li
             key={index}

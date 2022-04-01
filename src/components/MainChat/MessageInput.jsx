@@ -1,13 +1,18 @@
 import React from "react";
 import "./MessageInput.scss";
-import { GrSend } from "react-icons/gr";
 import { RiSendPlaneFill } from "react-icons/ri";
+import { useForm } from "react-hook-form";
 
-const MessageInput = () => {
+const MessageInput = (props) => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    props.onSendMessage(data);
+  };
   return (
     <div className="message">
-      <form className="message__form">
+      <form className="message__form" onSubmit={handleSubmit(onSubmit)}>
         <input
+          {...register("message", { required: true })}
           type="text"
           className="message__input"
           placeholder="Type your message / command here..."
