@@ -8,9 +8,12 @@ import {
 import { GiSupersonicArrow, GiBookmarklet } from "react-icons/gi";
 import { FaUniversity, FaToolbox } from "react-icons/fa";
 import { MdAutoGraph } from "react-icons/md";
+import { useForm } from "react-hook-form";
 import "./UserInfo.scss";
 
 const UserInfo = () => {
+  const { register, watch } = useForm();
+  console.log(watch("cvPDFFile"));
   return (
     <div className="user-info">
       <h2>Your Info</h2>
@@ -53,6 +56,7 @@ const UserInfo = () => {
           <span>Company names: Rising stars</span>
         </li>
       </ul>
+      <input type="file" {...register("cvPDFFile")} />
     </div>
   );
 };
